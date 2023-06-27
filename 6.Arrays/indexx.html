@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays In js</title>
+</head>
+<body>
+    <h1>
+        Arrays in js
+    </h1>
+    <p>
+        <ul>
+            <li>JS doesn't support associative array</li>
+        </ul>
+    </p>
+    <script>
+        // array declaration 
+        let array = ["zaeem","ahmad","ammad","amna"];
+        console.log(array);
+        //how to access its values
+        console.log(array[0]);
+        //loop throug an array
+        array.forEach(el=>{
+            console.log(el);
+        });
+        //new array();
+        let anotherArray = new Array("zaeem","ali","usman");
+        console.log(anotherArray);
+        //changing value in array
+        array[0] = "ammna";
+        console.log(array);
+        //concert array to string
+        let stringifyArray = array.toString();
+        console.log(stringifyArray);
+        //object declaration
+        let array_object = {
+            name:"zaeem",
+            age:23,
+            class:"bscs"
+        }
+        console.log(array_object);
+        //to get length of arra
+        console.log(array.length);
+        console.log(array.sort());
+        //isArray()
+        console.log(Array.isArray(array));
+    </script>
+</body>
+</html>

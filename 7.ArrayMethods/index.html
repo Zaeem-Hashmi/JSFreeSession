@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array methods</title>
+</head>
+<body>
+    <h1>Arrays Methods in JS</h1>
+     
+    <script>
+        let array1 = [1,2,3,4,5,5,8,6,7];
+        let array2 = [10,20,45,67,67];
+        let array3 = ["zaeem","ahmad","amna","ammad"];
+     
+        //to get length of array and convert it to string.
+        let length  = new Array(array1.sort(),array2.length,array3.toString());
+        let lengthObject = {
+            array1:array1.length,
+            array2:array2.length,
+            array3:array3.length
+        }
+        console.log(lengthObject);
+        console.log(length);
+        
+        //join method to convert array into string
+        
+        let arrayString = array1.join("+");
+        console.log(arrayString);
+        console.log(typeof(arrayString));
+        
+        //js pop() and push()
+        
+        let popValue =  array1.pop();
+        console.log(popValue);
+        console.log(array1);
+        array1.push(8);
+        
+        console.log(array1);
+        
+        //js shift and unshift
+        
+        array1.shift();
+        console.log(array1);
+        array1.unshift(1);
+        
+        console.log(array1);
+        
+        //delete element in an array
+        
+        delete array1[0];
+        console.log(array1);
+        
+        //concatinating arrays
+        
+        let allData = array1.concat(array2,array3);
+        console.log(allData);
+        
+        //splice and slice methods
+        
+        array1.splice(2,2,343423,23423423,42343,234234);
+        array1.splice(2,2);
+        console.log(array1);
+        
+        //slice method
+
+        // let sliceArray = array1.slice(4);
+        let sliceArray = array1.slice(1,4);
+        console.log(sliceArray);
+
+        //indexof function
+        let index = array1.indexOf(5);
+        let indexlast = array1.lastIndexOf(5);
+        console.log(index);
+        console.log(indexlast);
+
+        //array find();
+        //its return type is single vaiable on the basis of condition
+        let array = [1,2,3,4,5,6,7];
+        let result = array.find((value,index,array)=>{
+            return value > 3;
+        })
+        console.log("Value of find value is :" +result);
+
+        //arra findIndex function .
+        let indexResult = array.findIndex(myFunction);
+        function myFunction(value,key,array) {
+            return value > 4  ;
+        }
+        console.log("index of find value :"+ indexResult);
+
+        // array some function 
+        let id = 4;
+        let arraySome = [1,2,3,4,5,6,7,8];
+        let arraySomeResult =  arraySome.some((value,key)=>{
+            return value == id ;
+        });
+        console.log(arraySomeResult);
+
+        //array reduce function (confusion)
+        let reduceArray = [1,2,3,4,5,6,7,8,9];
+        let reduceArrayResult = reduceArray.reduce((total,value,key,reduceArray)=>{
+            return total+value
+        })
+        console.log(reduceArrayResult);
+
+        //js filter method 
+        // return type array
+        let filterArray = [1,2,3,4,5,6,7,8,9,10];
+        let filterArrayResult = filterArray.filter((value,key)=>{
+            return value > 3 && value < 7;
+        });
+        console.log(filterArrayResult);
+
+        //js map method
+        let mapArray = [1,2,3,4,5,6,7,8,9];
+        let mapArrayResult = mapArray.map((value,key,mapArray)=>{
+            return value*key;
+        }) 
+        console.log(mapArrayResult);
+    </script>
+</body>
+</html>
