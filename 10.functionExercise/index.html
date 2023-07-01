@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Exercise</title>
+</head>
+
+<body>
+    <h1>Functions Exercise</h1>
+
+    <script>
+        let temp = prompt("kindly Enter temperature");
+        let conersionType = prompt("kindly Enter in which type you want to convert temperature");
+        converter(temp, conersionType);
+        function converter(temp, type) {
+            if (type == "F" || type == "f") {
+                convertToFarenhite(temp);
+            }
+            else if (type == "C" || type == "c") {
+                convertToCelcius(temp);
+            }
+            else if (type == "K" || type == "k") {
+                convertToKelvin(temp)
+            }
+            else {
+                alert("kindly enter correct type");
+            }
+        }
+
+        function convertToFarenhite(temp) {
+            //to get scale of temperature
+            let scale = temp.substr(-1, 1);
+            // let scale = temp.slice(-1);
+            //to get temperature number
+            let quantity = temp.slice(0, -1);
+            if (scale == "f" || scale == "F") {
+                console.log("temperature already in farenhite");
+            } else if (scale == "c" || scale == "C") {
+                alert(1);
+                console.log("temperature converted to farenhite");
+            } else if (scale == "k" || scale == "K") {
+                console.log("temperature converted to farenhite");
+            } else {
+                alert("kindly enter temperature with scale or correct scale eg:32c");
+            }
+        }
+        function convertToKelvin(temp) {
+            //to get scale of temperature
+            let scale = temp.substr(-1, 1);
+            // let scale = temp.slice(-1);
+            //to get temperature number
+            let quantity = temp.slice(0, -1);
+            if (scale == "f" || scale == "F") {
+                console.log("temperature converted to kelvin");
+            } else if (scale == "c" || scale == "C") {
+                console.log("temperature converted to kelvin");
+            } else if (scale == "k" || scale == "K") {
+                console.log("temperature already in kelvin");
+            } else {
+                alert("kindly enter temperature with scale or correct scale eg:32c");
+            }
+        }
+        function convertToCelcius(temp) {
+            //to get scale of temperature
+            let scale = temp.substr(-1, 1);
+            // let scale = temp.slice(-1);
+            //to get temperature number
+            let quantity = temp.slice(0, -1);
+            if (scale == "f" || scale == "F") {
+                console.log("temperature converted to celcius");
+            } else if (scale == "c" || scale == "C") {
+                console.log("temperature already in celcius");
+            } else if (scale == "k" || scale == "K") {
+                console.log("temperature converted to celcius");
+            } else {
+                alert
+            }
+        }
+    </script>
+</body>
+
+</html>

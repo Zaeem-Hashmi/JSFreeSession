@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings Methods in JS</title>
+</head>
+<body>
+    <h1>String Methods in js</h1>
+
+    <script>
+        let fname = "zaeem";
+        let lname = "hashmi";
+        
+        //to get length of string;
+        let length = fname.length;
+        console.log(length); 
+
+        //slice the string using 
+
+        //1)slice method
+        let name = fname.slice(2,4);
+        console.log(name);
+        //if negative parameters is passed it starts from end point.
+
+
+        //2)substring
+        let substring = fname.substring(2,5);
+        console.log(substring);
+        //it doesnot accept negative parameters
+
+        // 3)substr
+        let substr = fname.substr(2,3);
+        console.log(substr);
+        //second parameter specifies length of part to pick from string.
+
+        //to replace part of string
+        let fullname = "zaeem ahmad hashmi";
+        let changedName = fullname.replace("zaeem","ali"); 
+        console.log(changedName);
+        console.log(fullname);
+        //return new string.
+        //case sensitive.
+
+        //replaceAll() to replace all the items in string.//
+
+        //toUpperCase and toLowerCase()//
+
+        let totalName = fname.concat(" ",lname);
+        console.log(totalName); 
+
+
+        //trim() => method to remove white space from string
+
+        //trimStart() => mehtod to remove white spaces from start of string
+        //trimEnd() =>method to remove whitespace from end of string
+
+        let string = "kiwi, banana, apple";
+        let array = string.split(",");
+        console.log(array);
+    </script>
+</body>
+</html>

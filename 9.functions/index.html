@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions In JS</title>
+</head>
+<body>
+    <h1>Functions in js</h1>
+
+    <script>
+        // function
+        function myFunction() {
+            console.log(10);
+        }
+
+        myFunction();
+        let x = function sum (){
+            return 20;
+        }
+
+        console.log(x());
+        let y = function (){
+            return "this is annonymous function";
+        }
+
+        console.log(y());
+        /*
+        TYPES OF FUNCTION
+        1.function without paramemter and return value
+        2.function with parameter and return value
+        3.function with parameter and without return value
+        4.function withoutparameter and with return value
+        */
+       function add(a,b,c =10) {
+        return a+b+c;
+       }
+       add(10,20);
+    </script>
+</body>
+</html>
