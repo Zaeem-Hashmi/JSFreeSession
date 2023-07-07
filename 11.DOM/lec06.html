@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing style dynamically</title>
+</head>
+<body>
+    
+    <script>
+        let element = document.createElement("div");
+        element.innerHTML += `<h1>Main image</h1>`;
+        element.innerHTML += `<img src="" alt="" width="300px" height="300px" id="img">`;
+        document.querySelector("body").appendChild(element);
+        let img = document.querySelector("img");
+        img.src = "./images/zaeem.png";
+        img.style.border = "10px solid brown";
+        img.style.background = "red";
+        img.style.borderRadius = "10px";
+        img.style.width = "300px";
+        img.style.display = "block";
+        img.style.margin = "auto";
+
+
+    </script>
+</body>
+</html>

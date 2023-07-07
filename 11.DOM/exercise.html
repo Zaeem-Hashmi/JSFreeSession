@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise first</title>
+    <style>
+        li{
+            list-style: none;
+            padding: 10px;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        .even{
+            background-color: burlywood;
+        }
+        .odd{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+        <li>44</li>
+        <li>55</li>
+        <li>66</li>
+    </ul>
+
+    <script>
+        let li = document.querySelectorAll("li");
+        for (const [index, value] of li.entries()) {
+            index % 2 == 0 ? value.classList.add("even") : value.classList.add("odd");
+        }
+    </script>
+</body>
+</html>

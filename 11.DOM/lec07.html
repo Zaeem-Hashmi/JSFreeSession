@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum perferendis alias, quos, beatae rem aliquam pariatur vitae ut iure, dignissimos assumenda doloremque modi?
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed veritatis facere sequi minus quisquam facilis nulla ab cum ea nostrum fuga officiis, quia voluptas doloremque, labore laboriosam vitae delectus alias hic! Delectus, doloremque assumenda.
+        </p>
+    </div>
+    <!-- <button onclick="this.style.background = 'red'">Apply</button> -->
+    <button id="apply">Apply</button>
+    <script>
+        document.querySelector("#apply").onClick = myFun;
+        function myFun() {
+            alert("hello");
+        }
+    </script>
+</body>
+</html>

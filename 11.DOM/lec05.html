@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM FORMS</title>
+</head>
+<body>
+    <form action="#" method="get" id="form">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="zaeem">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+    </form>
+
+    <script>
+        let formElements1 = document.getElementById("form");
+
+
+        //best way.
+        let formElements2 = document.forms["form"]["name"];
+        //
+
+        let formElements3 = document.querySelector("form");
+
+        let name = document.getElementById("name");
+         
+        console.log(name);
+        console.log(formElements3["email"]);
+
+    </script>
+</body>
+</html>
