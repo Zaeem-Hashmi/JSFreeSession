@@ -13,13 +13,30 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed veritatis facere sequi minus quisquam facilis nulla ab cum ea nostrum fuga officiis, quia voluptas doloremque, labore laboriosam vitae delectus alias hic! Delectus, doloremque assumenda.
         </p>
     </div>
-    <!-- <button onclick="this.style.background = 'red'">Apply</button> -->
-    <button id="apply">Apply</button>
+    <div class="form">
+        <label for="text">Enter Text Here</label>
+        <input type="text" id="text" name="text" value="" onkeydown="print(this)">
+    </div>
+    <button id="apply" onclick="myFun(this)" >Apply</button>
     <script>
-        document.querySelector("#apply").onClick = myFun;
-        function myFun() {
-            alert("hello");
+        //this keyword referes to the owner of object and if it directly place in script it represents global object(window object).
+        // console.log(this);
+        // function myFun(id) {
+        //     console.log(id.style.color = "red");
+        // }
+    </script>
+    <script>
+        let button = document.getElementById("apply");
+        button.onclick = ()=>{
+            document.querySelector(".main h1").innerHTML = "zaeem";
         }
+        // let input = document.querySelector(".form input");
+        // input.onkeypress = ()=>{
+        //     document.querySelector(".main h1").innerHTML = input.value;
+        // } 
+        let print = (id)=>{
+            document.querySelector(".main h1").innerHTML = id.value;
+        } 
     </script>
 </body>
 </html>

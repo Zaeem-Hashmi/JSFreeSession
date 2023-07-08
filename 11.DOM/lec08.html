@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lec 08 Event listner</title>
+</head>
+<body>
+    <h1>Add Event Listener in js</h1>
+    <div style="background-color: blue; display: none;" id="div1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quasi, a nesciunt odio expedita aliquid quae, sit voluptates enim similique iusto? Maiores ipsam officia praesentium consequatur molestias, doloribus commodi adipisci.</p>
+    </div>
+    <div style="background-color: pink; display: none;" id="div2">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, consequuntur perferendis. Veritatis dolores accusantium magni maiores labore praesentium nostrum neque exercitationem molestias tempore earum voluptatem quae necessitatibus temporibus, facilis perferendis.
+        </p>
+    </div>
+
+    <!-- <button id="1" onclick="show(this,1,2)">Show 1</button>
+    <button id="2" onclick="show(this,2,1)">Show 2</button> -->
+
+    
+    <button id="btn_1">Show 1</button>
+    <button id="btn_2">Show 2</button>
+
+    <script>
+        // let show = (id,no,no2)=>{
+        //     id.parentElement.children[no].style.display = "block";
+        //     id.parentElement.children[no2].style.display = "none";
+        // }
+
+        // document.getElementById("btn_1").addEventListener("click",()=>{
+
+        // });
+        
+        document.getElementById("btn_1").addEventListener("click",()=>{
+            document.getElementById("div1").style.display = "block";
+            document.getElementById("div2").style.display = "none"; 
+        });
+        document.getElementById("btn_2").addEventListener("click",function(){
+            document.getElementById("div2").style.display = "block";
+            document.getElementById("div1").style.display = "none"; 
+        });
+        
+
+        
+    </script>
+</body>
+</html>
