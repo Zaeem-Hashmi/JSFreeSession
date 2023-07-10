@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lec01 BOM</title>
+</head>
+<body>
+    <h1>Browser object Model</h1>
+    <div id="person1" class="main bg-dark">
+        <h1>
+            Main Paragraph.
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam nostrum vitae aspernatur excepturi repellendus magni quisquam tenetur illum, impedit natus iure voluptates eaque aut dolor doloremque non. Ex, fugit ad?
+        </p>
+        <button onclick="myFun()">facebook</button>
+    </div>
+
+    <script>
+        console.log(document.getElementById("person1"));
+        console.log(window.document.getElementById("person1"));
+        console.log(window.innerWidth);
+        console.log(window.innerHeight);
+
+        let myFun = ()=>{
+            window.close()
+            // window.open("https://www.facebook.com");
+        }
+    </script>
+</body>
+</html>

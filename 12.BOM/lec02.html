@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lec 02 </title>
+</head>
+<body>
+    <h1>
+        JS Location
+    </h1>
+    <button onclick="myFun()">Location</button>
+    <script>
+        let myFun = ()=>{
+            // get current location.
+            // console.log(window.location.href)
+
+            // move to given location.
+            // window.location.href = "https://www.facebook.com";
+
+            // to get hostname
+            // console.log(window.location.hostname);
+            //return pathname
+            // console.log(window.location.pathname);
+
+            // to reload the page
+            // console.log(1);
+            // window.location.reload();
+
+            // to mave back to previous page.
+            window.location.back();
+            // to move farward to next page.
+            window.history.forward();
+        }
+
+    </script>
+</body>
+</html>
