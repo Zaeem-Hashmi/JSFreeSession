@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Time Interval</title>
+</head>
+
+<body>
+    <div>
+        Total number of products in cart: <span id="products"></span>
+    </div>
+    <div>
+        Current Time is: <span id="time"></span>
+    </div>
+    <script>
+        //create clock using js.
+        let currentTimeInterval = setInterval(()=>{
+            let currentDateTime = new Date();
+            document.querySelector("#time").innerHTML = `${currentDateTime.getHours()}:${currentDateTime.getMinutes()}:${currentDateTime.getSeconds()}`;
+            // document.querySelector("#time").innerText = currentDateTime.getHours()+":"+currentDateTime.getMinutes()+":"+currentDateTime.getSeconds();
+        },1000)
+
+        // let numberOfProducts = 0;
+        // let myFun = ()=>{
+        //     if (numberOfProducts === 10) {
+        //         clearInterval(myInterval);
+        //     }
+        //     document.querySelector("#products").innerText = numberOfProducts;
+        //     numberOfProducts++;
+        // }
+        // let myInterval = setInterval(myFun,1000);
+
+
+    </script>
+</body>
+
+</html>
