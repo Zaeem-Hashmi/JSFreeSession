@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo">Fetch a file to change this text.</p>
+    <script>
+
+        // let file = "fetch_info.txt"
+        let file = "zaeem.json"
+        let data;
+
+        //with orientation working syncrously.
+
+        // fetch(file)
+        //     .then((x) => {
+        //         return x.text();
+        //     }).then((y)=>{
+        //         console.log(y); 
+        //     })
+
+        // without orientation working syncrously.
+
+        // fetch(file).then(x=>x.json()).then( y => data = y );
+        // setTimeout(() => {
+        //     console.log(data.name);
+        // }, 3000);
+
+        //async working
+
+        async function getText(file) {
+            let x =  await fetch(file);
+            let y =  await x.text();
+            console.log(y);
+        }
+        getText(file);
+    </script>
+</body>
+
+</html>
