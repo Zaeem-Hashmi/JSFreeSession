@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Request</title>
+</head>
+<body>
+    <h1>Hello from ajax request</h1>
+
+    <script>
+        function loadDoc() {
+          const xhttp = new XMLHttpRequest();
+          xhttp.onload = function() {
+             console.log(this.responseText);
+          }
+          xhttp.open("GET", "./info.txt");
+          xhttp.send();
+        }
+        loadDoc();
+        </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage in js</title>
+</head>
+<body>
+    <h1>Storage in js</h1>
+    <p>
+        we have two type of Storage
+        <ol>
+            <li>Session Storage</li>
+            <li>Local Storage</li>
+        </ol>
+    </p>
+
+    <script>
+        let name = "zaeem";
+        sessionStorage.setItem("name",name);
+        console.log(sessionStorage.getItem("name"));
+        sessionStorage.removeItem("name");
+    </script>
+</body>
+</html>
