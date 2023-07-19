@@ -66,7 +66,7 @@
         "question": "How do you add a comment in CSS?",
         "options": [
             "/* This is a comment */",
-            "<!-- This is a comment -->",
+            "<--- This is a comment -->",
             "' This is a comment"
         ],
         "answer": "/* This is a comment */"
@@ -74,19 +74,19 @@
     {
         "question": "Which HTML tag is used to define an unordered list?",
         "options": [
-            "<ol>",
-            "<li>",
-            "<ul>"
+            "ol",
+            "li",
+            "ul"
         ],
-        "answer": "<ul>"
+        "answer": "ul"
     },
     {
         "question": "What is the correct way to include an external JavaScript file in an HTML document?",
         "options": [
-            "<script href='script.js'>",
-            "<link rel='script' href='script.js'>",
-            "<script src='script.js'>"
+            "script href='script.js'",
+            "link rel='script' href='script.js'",
+            "script src='script.js'"
         ],
-        "answer": "<script src='script.js'>"
+        "answer": "script src='script.js'"
     }
 ]
