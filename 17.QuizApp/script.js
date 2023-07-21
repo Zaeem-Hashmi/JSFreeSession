@@ -1,4 +1,6 @@
 let data = [];
+let correctAnswers = [];
+let answers = [];
 
 function getStarted(id) {
     try {
@@ -18,13 +20,13 @@ async function getData(questionBoard) {
         data.forEach((el, key1) => {
             questionBoard.innerHTML += `<div class="${key1 != 0 ? "d-none" : ""}">
             <h4>${key1+1}. ${el.question}</h4>
-            <ul class="text-light" style="list-style: none;" id="${key1}"></ul>
+            <div class="text-light" id="${key1}"></div>
             <div class="d-flex justify-content-around"><button class="btn btn-outline-light ${key1 == 0 ? "d-none" : ""}" onclick="previous(this)">previous</button><button class="btn btn-outline-light px-4 ${key1 == data.length - 1 ? "d-none" : ""}" onclick="next(this)">next</button></div>
             </div>`
             el.options.forEach((el, key2) => {
-                document.getElementById(key1).innerHTML += `<li class="border px-3 py-2 mx-5 my-3 rounded">${key2+1}. ${el}</li>`;
+                document.getElementById(key1).innerHTML += `<button class="btn btn-outline-light my-3 w-100 text-start" onclick="storeResult(this)">${key2+1}.<span>${el}</span></button>`;
             });
-
+            correctAnswers.push(el.answer);
         });
     } catch (error) {
         alert(error);
@@ -46,5 +48,35 @@ function previous(id) {
     } catch (error) {
         alert(error);
     }
+}
+function storeResult(id) {
+    let arraySomeResult =  answers.some((value,key)=>{
+        return value ==  id.children[0].innerText;
+    });
+    if (!arraySomeResult) {
+        let options = id.parentElement.children;
+        let array =  Array.from(options);
+       array.forEach(el=>{
+            el.setAttribute("onclick","update(this)"); 
+        })
+        id.classList.add("btn-info")
+        answers.push(id.children[0].innerText);
+    }    
+}
+function update(id) {
+    let arraySomeResult =  answers.some((value,key)=>{
+        return value ==  id.children[0].innerText;
+    });
+    if (!arraySomeResult) {
+        let options = id.parentElement.children;
+        let array =  Array.from(options);
+       array.forEach(el=>{
+            el.classList.remove("btn-info"); 
+        })
+        answers.pop();
+        answers.push(id.children[0].innerText);
+        id.classList.add("btn-info");
+    }    
+    console.log(answers);
 }
 
