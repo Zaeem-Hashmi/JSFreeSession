@@ -19,12 +19,12 @@ async function getData(questionBoard) {
 
         data.forEach((el, key1) => {
             questionBoard.innerHTML += `<div class="${key1 != 0 ? "d-none" : ""}">
-            <h4>${key1+1}. ${el.question}</h4>
+            <h4>${key1 + 1}. ${el.question}</h4>
             <div class="text-light" id="${key1}"></div>
             <div class="d-flex justify-content-around"><button class="btn btn-outline-light ${key1 == 0 ? "d-none" : ""}" onclick="previous(this)">previous</button><button class="btn btn-outline-light px-4 ${key1 == data.length - 1 ? "d-none" : ""}" onclick="next(this)">next</button></div>
             </div>`
             el.options.forEach((el, key2) => {
-                document.getElementById(key1).innerHTML += `<button class="btn btn-outline-light my-3 w-100 text-start" onclick="storeResult(this)">${key2+1}.<span>${el}</span></button>`;
+                document.getElementById(key1).innerHTML += `<button class="btn btn-outline-light my-3 w-100 text-start" onclick="storeResult(this)">${key2 + 1}.<span>${el}</span></button>`;
             });
             correctAnswers.push(el.answer);
         });
@@ -50,33 +50,40 @@ function previous(id) {
     }
 }
 function storeResult(id) {
-    let arraySomeResult =  answers.some((value,key)=>{
-        return value ==  id.children[0].innerText;
-    });
-    if (!arraySomeResult) {
-        let options = id.parentElement.children;
-        let array =  Array.from(options);
-       array.forEach(el=>{
-            el.setAttribute("onclick","update(this)"); 
-        })
-        id.classList.add("btn-info")
-        answers.push(id.children[0].innerText);
-    }    
+    try {
+        let arraySomeResult = answers.some((value, key) => {
+            return value == id.children[0].innerText;
+        });
+        if (!arraySomeResult) {
+            let options = id.parentElement.children;
+            let array = Array.from(options);
+            array.forEach(el => {
+                el.setAttribute("onclick", "update(this)");
+            })
+            id.classList.add("btn-info")
+            answers.push(id.children[0].innerText);
+        }
+    } catch (error) {
+        alert(error);
+    }
 }
 function update(id) {
-    let arraySomeResult =  answers.some((value,key)=>{
-        return value ==  id.children[0].innerText;
-    });
-    if (!arraySomeResult) {
-        let options = id.parentElement.children;
-        let array =  Array.from(options);
-       array.forEach(el=>{
-            el.classList.remove("btn-info"); 
-        })
-        answers.pop();
-        answers.push(id.children[0].innerText);
-        id.classList.add("btn-info");
-    }    
-    console.log(answers);
+    try {
+        let arraySomeResult = answers.some((value, key) => {
+            return value == id.children[0].innerText;
+        });
+        if (!arraySomeResult) {
+            let options = id.parentElement.children;
+            let array = Array.from(options);
+            array.forEach(el => {
+                el.classList.remove("btn-info");
+            })
+            answers.pop();
+            answers.push(id.children[0].innerText);
+            id.classList.add("btn-info");
+        }
+    } catch (error) {
+        alert(error);
+    }
 }
 
